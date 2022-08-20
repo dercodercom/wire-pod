@@ -28,7 +28,7 @@ func (s *Server) StreamingIntentGraph(stream pb.ChipperGrpc_StreamingIntentGraph
 			Stream:     stream,
 			Device:     req.DeviceId,
 			Session:    req.Session,
-			LangString: req.LanguageCode.String(),
+			LangString: "GERMAN",
 			FirstReq:   req,
 			AudioCodec: req.AudioEncoding,
 			// Mode:
