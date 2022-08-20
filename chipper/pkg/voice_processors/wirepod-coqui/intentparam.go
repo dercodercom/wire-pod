@@ -53,7 +53,6 @@ func paramCheckerSlots(req interface{}, intent string, slots map[string]string, 
 				botLanguage = bot.Language
 			}
 		}
-		req.LanguageCode = botLanguage
 	}
 	if strings.Contains(intent, "volume") {
 		if slots["volume"] != "" {
@@ -237,7 +236,6 @@ func paramChecker(req interface{}, intent string, speechText string, justThisBot
 				botLanguage = bot.Language
 			}
 		}
-		req.LanguageCode = botLanguage
 	}
 	if botPlaySpecific {
 		if strings.Contains(intent, "intent_play_blackjack") {
@@ -503,7 +501,6 @@ func prehistoricParamChecker(req interface{}, intent string, speechText string, 
 				botLanguage = bot.Language
 			}
 		}
-		req.LanguageCode = botLanguage
 	}
 	if strings.Contains(intent, "intent_photo_take_extend") {
 		isParam = true
