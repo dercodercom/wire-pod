@@ -205,7 +205,7 @@ function getSTT() {
 			echo "Which voice model would you like to use?"
 			echo "1: english large_vocabulary (faster, less accurate, ~100MB)"
 			echo "2: english huge_vocabulary (slower, more accurate, handles faster speech better, ~900MB)"
-			echo "3: german (~266MB)"
+			echo "3: german (~539MB)"
 			echo
 			read -p "Enter a number (1): " sttModelNum
 			if [[ ! -n ${sttModelNum} ]]; then
