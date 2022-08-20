@@ -360,7 +360,8 @@ function sendBotAdd() {
     const form = document.getElementById('botAddForm');
     const select1 = document.getElementById('unitsAdd');
     const select2 = document.getElementById('firmwarePrefixAdd');
-    var data = "esn=" + form.elements['esnAdd'].value + "&location=" + form.elements['locationAdd'].value + "&units=" + select1.value + "&firmwareprefix=" + select2.value;
+    const select3 = document.getElementById('languageAdd');
+    var data = "esn=" + form.elements['esnAdd'].value + "&location=" + form.elements['locationAdd'].value + "&units=" + select1.value + "&firmwareprefix=" + select2.value+"&language="+ select3.value;
     var client = new HttpClient();
     var result = document.getElementById('botAddStatus');
     const resultP = document.createElement('p');

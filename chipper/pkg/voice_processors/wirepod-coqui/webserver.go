@@ -183,9 +183,10 @@ func apiHandler(w http.ResponseWriter, r *http.Request) {
 		botLocation := r.FormValue("location")
 		botUnits := r.FormValue("units")
 		botFirmwarePrefix := r.FormValue("firmwareprefix")
+		botLanguage := r.FormValue("language")
 		var is_early_opus bool
 		var use_play_specific bool
-		if botESN == "" || botLocation == "" || botUnits == "" || botFirmwarePrefix == "" {
+		if botESN == "" || botLocation == "" || botUnits == "" || botFirmwarePrefix == "" || botLanguage == "" {
 			fmt.Fprintf(w, "err: all fields are required")
 			return
 		}
@@ -223,6 +224,7 @@ func apiHandler(w http.ResponseWriter, r *http.Request) {
 			Units           string `json:"units"`
 			UsePlaySpecific bool   `json:"use_play_specific"`
 			IsEarlyOpus     bool   `json:"is_early_opus"`
+			Language     	string `json:"language"`
 		}
 		var botConfig botConfigStruct
 		if _, err := os.Stat("./botConfig.json"); err == nil {
@@ -238,7 +240,8 @@ func apiHandler(w http.ResponseWriter, r *http.Request) {
 				Units           string `json:"units"`
 				UsePlaySpecific bool   `json:"use_play_specific"`
 				IsEarlyOpus     bool   `json:"is_early_opus"`
-			}{Esn: botESN, Location: botLocation, Units: botUnits, UsePlaySpecific: use_play_specific, IsEarlyOpus: is_early_opus})
+				Language     	string `json:"language"`
+			}{Esn: botESN, Location: botLocation, Units: botUnits, UsePlaySpecific: use_play_specific, IsEarlyOpus: is_early_opus, Language: botLanguage})
 			newBotConfigJSONFile, _ := json.Marshal(botConfig)
 			os.WriteFile("./botConfig.json", newBotConfigJSONFile, 0644)
 		} else {
@@ -248,7 +251,8 @@ func apiHandler(w http.ResponseWriter, r *http.Request) {
 				Units           string `json:"units"`
 				UsePlaySpecific bool   `json:"use_play_specific"`
 				IsEarlyOpus     bool   `json:"is_early_opus"`
-			}{Esn: botESN, Location: botLocation, Units: botUnits, UsePlaySpecific: use_play_specific, IsEarlyOpus: is_early_opus})
+				Language     	string `json:"language"`
+			}{Esn: botESN, Location: botLocation, Units: botUnits, UsePlaySpecific: use_play_specific, IsEarlyOpus: is_early_opus, Language: botLanguage})
 			newBotConfigJSONFile, _ := json.Marshal(botConfig)
 			os.WriteFile("./botConfig.json", newBotConfigJSONFile, 0644)
 		}
@@ -268,6 +272,7 @@ func apiHandler(w http.ResponseWriter, r *http.Request) {
 			Units           string `json:"units"`
 			UsePlaySpecific bool   `json:"use_play_specific"`
 			IsEarlyOpus     bool   `json:"is_early_opus"`
+			Language        string `json:"language"`
 		}
 		var botConfigJSON botConfigStruct
 		botConfigJSONFile, err := os.ReadFile("./botConfig.json")
@@ -293,7 +298,8 @@ func apiHandler(w http.ResponseWriter, r *http.Request) {
 		botLocation := r.FormValue("location")
 		botUnits := r.FormValue("units")
 		botFirmwarePrefix := r.FormValue("firmwareprefix")
-		if botESN == "" || botLocation == "" || botUnits == "" || botFirmwarePrefix == "" {
+		botLanguage := r.FormValue("language")
+		if botESN == "" || botLocation == "" || botUnits == "" || botFirmwarePrefix == "" || botLanguage == "" {
 			fmt.Fprintf(w, "err: all fields are required")
 			return
 		}
@@ -333,6 +339,7 @@ func apiHandler(w http.ResponseWriter, r *http.Request) {
 			Units           string `json:"units"`
 			UsePlaySpecific bool   `json:"use_play_specific"`
 			IsEarlyOpus     bool   `json:"is_early_opus"`
+			Language        string `json:"language"`
 		}
 		var botConfig botConfigStruct
 		if _, err := os.Stat("./botConfig.json"); err == nil {
