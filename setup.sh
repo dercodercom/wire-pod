@@ -204,8 +204,8 @@ function getSTT() {
 			echo
 			echo "Which voice model would you like to use?"
 			echo "1: english large_vocabulary (faster, less accurate, ~100MB)"
-			echo "2: englis huge_vocabulary (slower, more accurate, handles faster speech better, ~900MB)"
-			echo "3: german (~411MB)"
+			echo "2: english huge_vocabulary (slower, more accurate, handles faster speech better, ~900MB)"
+			echo "3: german (~266MB)"
 			echo
 			read -p "Enter a number (1): " sttModelNum
 			if [[ ! -n ${sttModelNum} ]]; then
@@ -238,9 +238,9 @@ function getSTT() {
 			wget -O model.scorer -q --show-progress https://coqui.gateway.scarf.sh/english/coqui/v1.0.0-huge-vocab/huge-vocabulary.scorer
 		elif	 [[ ${sttModel} == "german" ]]; then
 		  echo "Getting STT model..."
-			wget -O model.tflite -q --show-progress https://coqui.gateway.scarf.sh/german/yoummday/v0.1.0/model.tflite
+			wget -O model.tflite -q --show-progress https://github.com/coqui-ai/STT-models/releases/download/german%2Fjaco-assistant%2Fv0.0.1/model.tflite
 			echo "Getting STT scorer..."
-			wget -O model.scorer -q --show-progress https://coqui.gateway.scarf.sh/german/yoummday/v0.1.0/kenlm.scorer
+			wget -O model.scorer -q --show-progress https://github.com/coqui-ai/STT-models/releases/download/german%2Fjaco-assistant%2Fv0.0.1/kenlm_de.scorer
 		else
 			echo "Invalid model specified"
 			exit 0
