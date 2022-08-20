@@ -25,7 +25,7 @@ func paramCheckerSlots(req interface{}, intent string, slots map[string]string, 
 	var intentParams map[string]string
 	var botLocation string = "San Francisco"
 	var botUnits string = "F"
-	var botLanguage string = "ENGLISH_US"
+	//var botLanguage string = "ENGLISH_US"
 	var botPlaySpecific bool = false
 	var botIsEarlyOpus bool = false
 	if _, err := os.Stat("./botConfig.json"); err == nil {
@@ -50,7 +50,7 @@ func paramCheckerSlots(req interface{}, intent string, slots map[string]string, 
 				botUnits = bot.Units
 				botPlaySpecific = bot.UsePlaySpecific
 				botIsEarlyOpus = bot.IsEarlyOpus
-				botLanguage = bot.Language
+				//botLanguage = bot.Language
 			}
 		}
 	}
@@ -208,7 +208,7 @@ func paramChecker(req interface{}, intent string, speechText string, justThisBot
 	var intentParams map[string]string
 	var botLocation string = "San Francisco"
 	var botUnits string = "F"
-	var botLanguage string = "ENGLISH_US"
+	//var botLanguage string = "ENGLISH_US"
 	var botPlaySpecific bool = false
 	var botIsEarlyOpus bool = false
 	if _, err := os.Stat("./botConfig.json"); err == nil {
@@ -233,7 +233,7 @@ func paramChecker(req interface{}, intent string, speechText string, justThisBot
 				botUnits = bot.Units
 				botPlaySpecific = bot.UsePlaySpecific
 				botIsEarlyOpus = bot.IsEarlyOpus
-				botLanguage = bot.Language
+				//botLanguage = bot.Language
 			}
 		}
 	}
@@ -477,7 +477,7 @@ func prehistoricParamChecker(req interface{}, intent string, speechText string, 
 	var intentParams map[string]string
 	var botLocation string = "San Francisco"
 	var botUnits string = "F"
-	var botLanguage string = "ENGLISH_US"
+	//var botLanguage string = "ENGLISH_US"
 	if _, err := os.Stat("./botConfig.json"); err == nil {
 		type botConfigJSON []struct {
 			ESN             string `json:"ESN"`
@@ -498,7 +498,7 @@ func prehistoricParamChecker(req interface{}, intent string, speechText string, 
 				logger("Found bot config for " + bot.ESN)
 				botLocation = bot.Location
 				botUnits = bot.Units
-				botLanguage = bot.Language
+				//botLanguage = bot.Language
 			}
 		}
 	}
