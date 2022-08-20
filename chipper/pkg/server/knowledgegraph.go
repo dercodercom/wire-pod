@@ -29,7 +29,7 @@ func (s *Server) StreamingKnowledgeGraph(stream pb.ChipperGrpc_StreamingKnowledg
 			Session:    req.Session,
 			LangString: "GERMAN",
 			FirstReq:   req,
-			AudioCodec: "LINEAR_PCM",
+			AudioCodec: req.AudioEncoding,
 			// Why is this not passed
 			// Mode:
 		},
