@@ -88,7 +88,7 @@ func sttHandler(reqThing interface{}, isKnowledgeGraph bool) (transcribedString 
 		logger("Bot " + strconv.Itoa(justThisBotNum) + " ESN: " + req1.Device)
 		logger("Bot " + strconv.Itoa(justThisBotNum) + " Session: " + req1.Session)
 		logger("Bot " + strconv.Itoa(justThisBotNum) + " Language: " + req1.LangString)
-		logger("Bot " + strconv.Itoa(justThisBotNum) + " AudioCodec: " + req1.AudioCodec)
+		logger("Bot " + strconv.Itoa(justThisBotNum) + " AudioCodec: " + req1.AudioCodec.String())
 		logger("KG Stream " + strconv.Itoa(justThisBotNum) + " opened.")
 		deviceESN = req1.Device
 		deviceSession = req1.Session
@@ -96,7 +96,7 @@ func sttHandler(reqThing interface{}, isKnowledgeGraph bool) (transcribedString 
 		logger("Bot " + strconv.Itoa(justThisBotNum) + " ESN: " + req3.Device)
 		logger("Bot " + strconv.Itoa(justThisBotNum) + " Session: " + req3.Session)
 		logger("Bot " + strconv.Itoa(justThisBotNum) + " Language: " + req3.LangString)
-		logger("Bot " + strconv.Itoa(justThisBotNum) + " AudioCodec: " + req3.AudioCodec)
+		logger("Bot " + strconv.Itoa(justThisBotNum) + " AudioCodec: " + req3.AudioCodec.String())
 		deviceESN = req3.Device
 		deviceSession = req3.Session
 		logger("Stream " + strconv.Itoa(justThisBotNum) + " opened.")
@@ -104,7 +104,7 @@ func sttHandler(reqThing interface{}, isKnowledgeGraph bool) (transcribedString 
 		logger("Bot " + strconv.Itoa(justThisBotNum) + " ESN: " + req2.Device)
 		logger("Bot " + strconv.Itoa(justThisBotNum) + " Session: " + req2.Session)
 		logger("Bot " + strconv.Itoa(justThisBotNum) + " Language: " + req2.LangString)
-		logger("Bot " + strconv.Itoa(justThisBotNum) + " AudioCodec: " + req2.AudioCodec)
+		logger("Bot " + strconv.Itoa(justThisBotNum) + " AudioCodec: " + req2.AudioCodec.String())
 		deviceESN = req2.Device
 		deviceSession = req2.Session
 		logger("Stream " + strconv.Itoa(justThisBotNum) + " opened.")
