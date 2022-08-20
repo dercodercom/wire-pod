@@ -242,7 +242,7 @@ function getSTT() {
 			wget -O model.tflite -q --show-progress https://github.com/coqui-ai/STT-models/releases/download/german%2FAASHISHAG%2Fv0.9.0/model.tflite
 			echo "Getting STT scorer..."
 			#wget -O model.scorer -q --show-progress https://github.com/coqui-ai/STT-models/releases/download/german%2Fjaco-assistant%2Fv0.0.1/kenlm_de.scorer
-			wget -O model.tflite -q --show-progress https://github.com/coqui-ai/STT-models/releases/download/german%2FAASHISHAG%2Fv0.9.0/de-aashishag-1-prune-kenlm.scorer
+			wget -O model.scorer -q --show-progress https://github.com/coqui-ai/STT-models/releases/download/german%2FAASHISHAG%2Fv0.9.0/de-aashishag-1-prune-kenlm.scorer
 		else
 			echo "Invalid model specified"
 			exit 0
