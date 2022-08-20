@@ -464,7 +464,8 @@ func getLanguage(locale string) (pb.LanguageCode, error) {
 		break
 	default:
 		// unknown == default to en_US
-		return pb.LanguageCode_ENGLISH_US, nil
+		//return pb.LanguageCode_ENGLISH_US, nil
+		return pb.LanguageCode_GERMAN, nil
 	}
 
 	switch country {
@@ -473,7 +474,8 @@ func getLanguage(locale string) (pb.LanguageCode, error) {
 	case "au":
 		return pb.LanguageCode_ENGLISH_AU, nil
 	}
-	return pb.LanguageCode_ENGLISH_US, nil
+	//return pb.LanguageCode_ENGLISH_US, nil
+	return pb.LanguageCode_GERMAN, nil
 }
 
 var modeMap = map[cloud.StreamType]pb.RobotMode{
