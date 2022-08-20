@@ -30,7 +30,7 @@ func (s *Server) StreamingIntent(stream pb.ChipperGrpc_StreamingIntentServer) er
 			Session:    req.Session,
 			LangString: "GERMAN",
 			FirstReq:   req,
-			AudioCodec: req.AudioEncoding,
+			AudioCodec: "LINEAR_PCM",
 		},
 	); err != nil {
 		log.WithFields(log.Fields{
