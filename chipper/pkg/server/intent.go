@@ -31,7 +31,7 @@ func (s *Server) StreamingIntent(stream pb.ChipperGrpc_StreamingIntentServer) er
 			LangString: req.LanguageCode.String(),
 			FirstReq:   req,
 			AudioCodec: req.AudioEncoding,
-			LanguageCode: req.LanguageCode.String(),
+			LanguageCode: req.LanguageCode,
 		},
 	); err != nil {
 		log.WithFields(log.Fields{

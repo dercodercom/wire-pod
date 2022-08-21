@@ -30,7 +30,7 @@ func (s *Server) StreamingKnowledgeGraph(stream pb.ChipperGrpc_StreamingKnowledg
 			LangString: req.LanguageCode.String(),
 			FirstReq:   req,
 			AudioCodec: req.AudioEncoding,
-			LanguageCode: req.LanguageCode.String(),
+			LanguageCode: req.LanguageCode,
 			// Why is this not passed
 			// Mode:
 		},
