@@ -28,11 +28,10 @@ func (s *Server) StreamingIntentGraph(stream pb.ChipperGrpc_StreamingIntentGraph
 			Stream:     stream,
 			Device:     req.DeviceId,
 			Session:    req.Session,
-			LangString: "GERMAN",
+			LangString: req.LangString,
 			FirstReq:   req,
 			AudioCodec: req.AudioEncoding,
-			LanguageCode: 3,
-			IntentService: 3,
+			LanguageCode: req.LanguageCode,
 			// Mode:
 		},
 	); err != nil {

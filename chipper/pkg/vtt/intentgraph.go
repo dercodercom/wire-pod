@@ -16,7 +16,6 @@ type IntentGraphRequest struct {
 	FirstReq   *pb.StreamingIntentGraphRequest
 	AudioCodec pb.AudioEncoding
 	LanguageCode pb.LanguageCode
-	IntentService pb.IntentService
 	// KnowledgeGraph specific
 	Mode pb.RobotMode
 }

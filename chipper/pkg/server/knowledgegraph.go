@@ -27,7 +27,7 @@ func (s *Server) StreamingKnowledgeGraph(stream pb.ChipperGrpc_StreamingKnowledg
 			Stream:     stream,
 			Device:     req.DeviceId,
 			Session:    req.Session,
-			LangString: "GERMAN",
+			LangString: req.LangString,
 			FirstReq:   req,
 			AudioCodec: req.AudioEncoding,
 			// Why is this not passed
