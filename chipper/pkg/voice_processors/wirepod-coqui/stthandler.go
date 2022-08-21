@@ -97,7 +97,6 @@ func sttHandler(reqThing interface{}, isKnowledgeGraph bool) (transcribedString 
 		logger("Bot " + strconv.Itoa(justThisBotNum) + " Session: " + req3.Session)
 		logger("Bot " + strconv.Itoa(justThisBotNum) + " Language: " + req3.LangString)
 		logger("Bot " + strconv.Itoa(justThisBotNum) + " AudioCodec: " + req3.AudioCodec.String())
-		req3.LanguageCode = "GERMAN"
 		deviceESN = req3.Device
 		deviceSession = req3.Session
 		logger("Stream " + strconv.Itoa(justThisBotNum) + " opened.")

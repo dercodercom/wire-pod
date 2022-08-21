@@ -15,7 +15,7 @@ type IntentGraphRequest struct {
 	LangString string
 	FirstReq   *pb.StreamingIntentGraphRequest
 	AudioCodec pb.AudioEncoding
-
+	LanguageCode String
 	// KnowledgeGraph specific
 	Mode pb.RobotMode
 }

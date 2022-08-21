@@ -31,6 +31,7 @@ func (s *Server) StreamingIntentGraph(stream pb.ChipperGrpc_StreamingIntentGraph
 			LangString: "GERMAN",
 			FirstReq:   req,
 			AudioCodec: req.AudioEncoding,
+			LanguageCode: "GERMAN",
 			// Mode:
 		},
 	); err != nil {
