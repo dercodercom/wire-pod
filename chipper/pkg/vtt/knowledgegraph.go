@@ -16,6 +16,7 @@ type KnowledgeGraphRequest struct {
 	FirstReq   *pb.StreamingKnowledgeGraphRequest
 	Mode       pb.RobotMode
 	AudioCodec pb.AudioEncoding
+	LanguageCode pb.LanguageCode
 }
 
 // KnowledgeGraphResponse is the response type VTT knowledge graph processors

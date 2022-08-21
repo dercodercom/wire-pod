@@ -15,6 +15,7 @@ type IntentRequest struct {
 	LangString string
 	FirstReq   *pb.StreamingIntentRequest
 	AudioCodec pb.AudioEncoding
+	LanguageCode pb.LanguageCode
 }
 
 // IntentResponse is the response type VTT intent processors
