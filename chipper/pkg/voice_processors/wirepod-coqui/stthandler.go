@@ -117,6 +117,7 @@ func sttHandler(reqThing interface{}, isKnowledgeGraph bool) (transcribedString 
 	} else {
 		data = append(data, req2.FirstReq.InputAudio...)
 	}
+	logger(data)
 	if len(data) > 0 {
 		if data[0] == 0x4f {
 			isOpus = true
